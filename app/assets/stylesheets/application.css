@@ -18,20 +18,22 @@ html{
 }
 
  body{
-     margin: auto;
-     height:100%;
+     margin-left: 15%;
+     margin-right: 15%;
+     height:95%;
      background:linear-gradient(135deg, rgba(255, 221, 40, 0.8), rgba(255, 110, 80, 0.8)),url('BackGround-rungril.jpg') 100%;
      background-size: cover;
-   /*=image-url('BackGround-rungril.jpg'); */
  }
 
  .content_area{
     padding-left: 10%;
     padding-right: 10%;
-    height: 70%;
+    height: 80%;
 }
 
  .header{
+    padding-left: 10%;
+    padding-right: 10%;     
     background-color: rgba(204,204,204, 0.3);
     border-width:5px;
 	border-color:rgb(204,204,204,0.4);
@@ -44,14 +46,20 @@ html{
     font-family: 'Alegreya Sans SC', sans-serif;
 }
  
-.Footer{
+.footer{
+    position: fixed;
+    bottom: 1px;
+
+    padding-left: 50%;
+    padding-right: 0%;
     background-color: rgba(204,204,204, 0.3);
     border-width:0.5px;
 	border-color:rgb(204,204,204,0.4);
     border-style: solid;
+
  }
 
- .Footer p{
+ .footer p{
     color:white;
     font-weight: normal; 
     font-family: 'Alegreya Sans SC', sans-serif;

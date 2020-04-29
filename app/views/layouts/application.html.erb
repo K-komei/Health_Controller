@@ -10,18 +10,24 @@
   </head>
 
   <body>
-
-  <div class = content_area>
-   <div class = header>
+   <div class = "header">
      <h1>HealthController</h1>
    </div>
 
-    <%= yield %>
+    <% if flash[:notice] %>
+     <%= flash[:notice] %>
+    <%end%>
 
-    <div class = Footer>
+
+  <div class = "content_area">
+    <%= yield %>
+  </div>
+
+   
+   
+   <div class = "footer">
      <p>Make By K-Komei</p>
    </div>
 
-    </div>
   </body>
 </html>

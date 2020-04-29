@@ -4,17 +4,12 @@
 <%= link_to("Add_Page","/edit_data/Add_Cal") %>
 
 <div class = "veiw">
-        <% @calories.each do| calory | %>
-    <div class = "Contains">
-
-        <h1> <%= "#{calory.Day}:#{calory.cal}" %></h1>
-
-
-    </div>
-            <%end%>
-
+    <% @calories.each do| calory | %>
+        <div class = "Contains">
+            <%= "#{calory.Day}:#{calory.cal}" %>
+        </div>
+    <%end%>
 </div>
-
 
 </div>
 

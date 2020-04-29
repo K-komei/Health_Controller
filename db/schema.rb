@@ -10,13 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_28_142349) do
+ActiveRecord::Schema.define(version: 2020_04_29_132612) do
 
-  create_table "calories", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.date "Day"
-    t.integer "cal"
-  end
+# Could not dump table "calories" because of following StandardError
+#   Unknown type 'String' for column 'item'
 
 end
