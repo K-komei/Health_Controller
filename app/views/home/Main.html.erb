@@ -1,4 +1,20 @@
 <div class = "Main base">
 <h1>HestMaincontens</h1>
-<p>ようこそ</p>
+
+<%= link_to("Add_Page","/edit_data/Add_Cal") %>
+
+<div class = "veiw">
+        <% @calories.each do| calory | %>
+    <div class = "Contains">
+
+        <h1> <%= "#{calory.Day}:#{calory.cal}" %></h1>
+
+
+    </div>
+            <%end%>
+
 </div>
+
+
+</div>
+

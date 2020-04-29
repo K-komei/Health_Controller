@@ -1,0 +1,12 @@
+<div class = "Add_Cal base">
+
+<%= form_tag({ :controller => 'calories', :action => 'create' },{ :method => :post}) do %>
+<p>InputDay</p>
+<input type = "text" name = "Day" value = "<%= Date.today %>">
+<p>GetCalory</p>
+<input type = "text" name = "cal" value = "0">
+
+<input type = "submit" value = "Save">
+<%end%>
+
+</div>
