@@ -3,46 +3,48 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+.login{
+    margin: 0px;    
+}
+
 .login h1{
+    margin: 0px;
     color:white;
     font-weight: normal; 
     font-family: 'Alegreya Sans SC', sans-serif;
     border-bottom: solid;
     border-width:0.1px;
-    padding-left: 30px;
     
 }
 
 .base{
     height: 100%;
+    margin: 0px;
+
 }
 
 .login_Form{
     color:white;
     font-weight: normal; 
     font-family: 'Alegreya Sans SC', sans-serif;
-    padding-left: 45px;
     padding-right: 45px;
     padding-bottom: 45px;
-    
 
 }
+
 
 .Main{
-    color:white;
-    font-weight: normal; 
-    font-family: 'Alegreya Sans SC', sans-serif;    
+    margin: 0px;
 }
 
-.Main h1{
-    padding-left: 30px;
-}
+
+
+
 .veiw{
-    width:50%;
+    width:60%;
     overflow-y:scroll;
     border-top: double;
     border-color: rgba(255, 110, 80, 0.8);
-    margin-left: 45px;
     height: 385px;
     background-color:rgba(150,150,150, .6);
 }

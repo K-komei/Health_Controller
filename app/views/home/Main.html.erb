@@ -1,14 +1,19 @@
 <div class = "Main base">
-<h1>HestMaincontens</h1>
+<div class = "ContensTitle">
+ <h1>HestMaincontens</h1>
+</div>
 
-<%= link_to("Add_Page","/edit_data/Add_Cal") %>
+<div class = "Main_Area">
 
 <div class = "veiw">
+<%= link_to("Add_Page","/edit_data/Add_Cal") %>
     <% @calories.each do| calory | %>
         <div class = "Contains">
             <%= "#{calory.Day}:#{calory.cal}" %>
         </div>
     <%end%>
+</div>
+
 </div>
 
 </div>

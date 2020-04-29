@@ -11,15 +11,29 @@
 
   <body>
    <div class = "header">
+   <div class = "header_Title">
      <h1>HealthController</h1>
    </div>
-
+   <div class = "link_area">
+    <div class = "link_btn">
+      <%= link_to("Login","/")%>
+    </div>
+    <div class = "link_btn">
+      <%= link_to("Main","/home/Main") %>
+    </div>
+    <div class = "link_btn">
+      <%= link_to("Add","/edit_data/Add_Cal") %>
+    </div>
+   
+   </div>  
+   </div>
     <% if flash[:notice] %>
-     <%= flash[:notice] %>
+    <%= flash[:notice] %>
     <%end%>
-
+ 
 
   <div class = "content_area">
+ 
     <%= yield %>
   </div>
 
