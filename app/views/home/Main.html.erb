@@ -9,7 +9,12 @@
 <%= link_to("Add_Page","/edit_data/Add_Cal") %>
     <% @calories.each do| calory | %>
         <div class = "Contains">
-            <%= "#{calory.Day}:#{calory.cal}" %>
+          <div class = "item col">
+            <%= "#{calory.item}" %>
+          </div>
+          <div class = "cal col">
+          <%= "#{calory.cal}" %>
+          </div>  
         </div>
     <%end%>
 </div>
