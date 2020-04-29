@@ -1,3 +1,36 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.login h1{
+    color:white;
+    font-weight: normal; 
+    font-family: 'Alegreya Sans SC', sans-serif;
+    border-bottom: solid;
+    border-width:0.1px;
+    padding-left: 30px;
+    
+}
+
+.base{
+    height: 100%;
+}
+
+.login_Form{
+    color:white;
+    font-weight: normal; 
+    font-family: 'Alegreya Sans SC', sans-serif;
+    padding-left: 45px;
+    padding-right: 45px;
+    padding-bottom: 45px;
+    
+
+}
+
+.Main{
+    color:white;
+    font-weight: normal; 
+    font-family: 'Alegreya Sans SC', sans-serif;    
+}
+

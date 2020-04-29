@@ -4,12 +4,24 @@
     <title>HealthController</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:300" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+
+  <div class = content_area>
+   <div class = header>
+     <h1>HealthController</h1>
+   </div>
+
     <%= yield %>
+
+    <div class = Footer>
+     <p>Make By K-Komei</p>
+   </div>
+
+    </div>
   </body>
 </html>
