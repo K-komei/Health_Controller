@@ -1,8 +1,6 @@
 class CaloriesController < ApplicationController
 
-  
-
-
+    
   def create
     @calory = Calory.new(
       Day: params[:Day],
