@@ -13,6 +13,12 @@
  *= require_tree .
  *= require_self
  */
+
+@font-face {
+	font-family: 'MyFont';
+	src: url(azukiB.ttf);
+}
+
 html{
     height: 100%;
     margin: 0px;
@@ -121,4 +127,27 @@ html{
     margin-left: 60px;
     height:80%;
 
+}
+
+
+.form_area{
+    border: 1px solid #e6ecf0;
+    background-color: aliceblue;
+    border-radius: 4px;  
+    border-style:solid;
+    border-color: darkblue;
+    border-width: 1px;
+    width: 250px;
+    height:30px;
+    margin-left:20px ;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+}
+
+.flashBer{
+    color:rgba(255, 110, 80, 0.8);
+    font-weight: normal; 
+    font-family: 'Alegreya Sans SC', sans-serif;
+       
 }

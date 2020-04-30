@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   post "/home/Main" => "home#Main"
 
   get "/edit_data/Add_Cal" => "edit_data#Add_Cal"
+
+  get "/edit_data/Add_Cal" => "calories#add_rec"
   
   post "/edit_data/Add_Cal" => "calories#create"
   

@@ -4,18 +4,19 @@
 </div>
 
 <div class = "Main_Area">
-
+<div class = "From_Area">
 <%= form_tag({ :controller => 'calories', :action => 'create' },{ :method => :post}) do %>
-<p>InputDay</p>
-<input type = "text" name = "Day" value = "<%= Date.today %>">
-<p>item</p>
-<input type = "text" name = "item" value = "">
-<p>GetCalory</p>
-<input type = "text" name = "cal" value = "0">
-
-<input type = "submit" value = "Save">
+<h2>Date</h2>
+<input type = "text" name = "Day" value = "<%= Date.today %>" class="editcol">
+<h2>Add Item</h2>
+<input type = "text" name = "item" value = ""class="editcol">
+<h2>Item's Calory</h2>
+<input type = "text" name = "cal" value = "0"class="editcol">
+<h2></h2>
+<input type = "submit" value = "Save" class = "save_btn">
 <%end%>
 
+</div>
 </div>
 
 </div>

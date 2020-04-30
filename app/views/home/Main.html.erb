@@ -5,21 +5,56 @@
 
 <div class = "Main_Area">
 
+
+<div class = "title_ber">
+  <h1>Today's calory<h1>
+</div>
+ <div class ="Dash_bord">
+   <div class = "Result_cal">
+   <h2>Mission : <%= "#{@Mission_calory}" %> kcal</h2>
+   </div>
+   
+   <div class = "Result_cal">
+   <h2>Result : <%= "#{@Total_calory}" %> kcal</h2>
+   </div>
+
+   <div class = "Result_cal">
+   <h2>Residue : <%= "#{@Difference_calory}" %> kcal</h2>
+   </div>
+
+   
+ </div>
+ <div class ="veiw_ber">
+  <%= form_tag({ :controller => 'calories', :action => 'add_rec' },{ :method => :get}) do %>
+  <input type="submit" value="Add Items" class = "addbtn contens_btn">
+<% end %>
+
+</div>
+
 <div class = "veiw">
-<%= link_to("Add_Page","/edit_data/Add_Cal") %>
+
     <% @calories.each do| calory | %>
         <div class = "Contains">
-          <div class = "item col">
+          <div class = "item col_item">
             <%= "#{calory.item}" %>
           </div>
-          <div class = "cal col">
-          <%= "#{calory.cal}" %>
-          </div>  
+          <div class = "cal col_item">
+          <%= "・・　#{calory.cal} kcal" %>
+          </div>
+          <div class = "col_btn">
+          <input type ="button" value="Edit" class = "contens_btn">
+          </div>
+          <div class = "col_btn">
+          <input type ="button" value="delete" class = "contens_btn">
+          </div>
+
         </div>
     <%end%>
-</div>
+
+
 
 </div>
 
 </div>
 
+</div>

@@ -3,6 +3,53 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-p{
-    margin: 0px;
+.From_Area h2{
+    color:cornflowerblue;
+    font-weight: normal; 
+    padding-right: 45px;
+    padding-bottom: 5px;
+    font-size: 30px;
+    font-family: 'MyFont', sans-serif;
+    margin: 0;
 }
+
+.editcol{
+    border: 1px solid #e6ecf0;
+    background-color:rgba($color: aliceblue, $alpha: 0.7);
+    border-radius: 4px;  
+    border-style:solid;
+    border-color: darkblue;
+    border-width: 1px;
+    width: 200px;
+    height:30px;
+    margin-left:20px ;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: right;
+    padding-right: 20px;
+    font-size: 20px;
+    font-family: 'MyFont', sans-serif;
+
+}
+
+.save_btn{
+    text-decoration: none;
+    background-image: linear-gradient(#fff,#f5f8fa);
+    border: 1px solid #e6ecf0;
+    border-radius: 4px;
+    color: #393e42;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 4px;
+    margin-top: 2px;
+    margin-bottom: 2px; 
+    width: 120px;
+    height: 30px;
+    margin-left: 120px;
+    
+    text-align: center;
+    
+  }
+  

@@ -2,10 +2,13 @@
 <html>
   <head>
     <title>HealthController</title>
+    <meta http-equiv="Content-Language" content="ja">
+    <meta name="google" content="notranslate">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:300" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Noto+Sans+JP:400,700" rel="stylesheet">
+    
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -29,7 +32,9 @@
    </div>  
    </div>
     <% if flash[:notice] %>
-    <%= flash[:notice] %>
+     <div class = "flashBer">
+      <%= flash[:notice] %>
+      </div>
     <%end%>
  
 
@@ -45,4 +50,5 @@
    </div>
 
   </body>
+
 </html>

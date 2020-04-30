@@ -14,9 +14,11 @@ class CaloriesController < ApplicationController
     else
       flash[:notice] = "Failure Registration"
       render("edit_data/Add_Cal")
-    
-    
-      
     end
   end
+
+  def add_rec
+    redirect_to("/edit_data/Add_Cal")
+  end
+
 end
