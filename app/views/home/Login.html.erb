@@ -4,7 +4,7 @@
 </div>
 <div class = "Main_Area">
 
-<%= form_tag("home/Main") do %>
+<%= form_tag({:controller => 'user', :action => 'login' },{ :method => :post}) do %>
 <div class = "login_Form" >
 <p>Account Name</p>
 <input type = "text" name ="username" class = "form_area">

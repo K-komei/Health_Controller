@@ -11,6 +11,9 @@ Rails.application.routes.draw do
   get "/edit_data/Add_Cal" => "calories#add_rec"
   
   post "/edit_data/Add_Cal" => "calories#create"
+
+  # post "/user/create" => "user#create"
   
+  post "/user/login" => "user#login"
 
 end
