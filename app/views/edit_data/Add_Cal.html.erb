@@ -1,22 +1,39 @@
 <div class = "Add_Cal base">
 <div class = "ContensTitle">
-<h1>Add_page</h1>
+<h1>Add_Items</h1>
 </div>
 
 <div class = "Main_Area">
-<div class = "From_Area">
-<%= form_tag({ :controller => 'calories', :action => 'create' },{ :method => :post}) do %>
-<h2>Date</h2>
-<input type = "text" name = "Day" value = "<%= Date.today %>" class="editcol">
-<h2>Add Item</h2>
-<input type = "text" name = "item" value = ""class="editcol">
-<h2>Item's Calory</h2>
-<input type = "text" name = "cal" value = "0"class="editcol">
-<h2></h2>
-<input type = "submit" value = "Save" class = "save_btn">
-<%end%>
+<div class="area">
+    <input type="radio" name="tab_name" id="tab1" checked>
+    <label class="tab_class" for="tab1">Custom_Add</label>
+    <div class="content_class">
+    <div class = "From_Area">
+    <%= form_tag({ :controller => 'calories', :action => 'create' },{ :method => :post}) do %>
+    <h2>Date</h2>
+    <input type = "text" name = "Day" value = "<%= Date.today %>" class="editcol">
+    <h2>Add Item</h2>
+    <input type = "text" name = "item" value = ""class="editcol">
+    <h2>Item's Calory</h2>
+     <input type = "text" name = "cal" value = "0"class="editcol">
+    <h2></h2>
+    <input type = "submit" value = "Save" class = "save_btn">
+    <%end%>
 
 </div>
+    </div>
+    <input type="radio" name="tab_name" id="tab2" >
+    <label class="tab_class" for="tab2">History_Item</label>
+    <div class="content_class">
+      <p>Add's Hsitory</p>
+    </div>
+    <input type="radio" name="tab_name" id="tab3" >
+    <label class="tab_class" for="tab3">Template_Item</label>
+    <div class="content_class">
+      <p>Add's Template</p>
+    </div>
+</div>
+
 </div>
 
 </div>

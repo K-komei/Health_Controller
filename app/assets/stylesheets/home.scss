@@ -61,14 +61,12 @@ font-size: 18px;
 color: brown;
 }
 
-
-
 .veiw{
     width:90%;
     overflow-y:scroll;
     border-top: double;
     border-color: rgba(255, 110, 80, 0.8);
-    height: 360px;
+    height: 340px;
     background-color:rgba(150,150,150, .6);
 }
 .veiw::-webkit-scrollbar {

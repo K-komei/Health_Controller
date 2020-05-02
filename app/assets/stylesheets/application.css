@@ -20,8 +20,8 @@
 }
 
 html{
-    height: 100%;
-    margin: 0px;
+    height: 95%;
+    margin: 0;
 }
 
  body{
@@ -31,8 +31,7 @@ html{
     margin:0px;
     height:99%;
     background:aliceblue;
-    background-size: cover;
-     
+    background-size: cover;     
  }
 
  .content_area{
@@ -146,8 +145,10 @@ html{
 }
 
 .flashBer{
-    color:rgba(255, 110, 80, 0.8);
-    font-weight: normal; 
+    color:rgba(240, 30, 240, 0.8);
+    font-weight: initial; 
     font-family: 'Alegreya Sans SC', sans-serif;
+    font-size: 20px;
+    height:3%;
        
 }
