@@ -27,12 +27,11 @@
  <div class ="veiw_ber">
   <%= form_tag({ :controller => 'calories', :action => 'add_rec' },{ :method => :get}) do %>
   <input type="submit" value="Add Items" class = "addbtn contens_btn">
-<% end %>
+  <% end %> 
 
 </div>
 
 <div class = "veiw">
-
     <% @calories.each do| calory | %>
         <div class = "Contains">
           <div class = "item col_item">
@@ -41,13 +40,13 @@
           <div class = "cal col_item">
           <%= "・・　#{calory.cal} kcal" %>
           </div>
-          <div class = "col_btn">
-          <input type ="button" value="Edit" class = "contens_btn">
+          <div class = "delete col_item">          
+          <%= form_tag({:controller => 'calories', :action => 'delete_rec' },{ :method => :post}) do %>
+            <input type="hidden" name="id" value= <% calory.id %>>
+              <%= "#{calory.id}"%> 
+            <input type="submit" value="送信" class ="contens_btn delete_btn">
+          <%end%>
           </div>
-          <div class = "col_btn">
-          <input type ="button" value="delete" class = "contens_btn">
-          </div>
-
         </div>
     <%end%>
 

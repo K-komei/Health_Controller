@@ -4,8 +4,9 @@ class UserController < ApplicationController
 
 
     def login
-        @user = User.find_by(username: params[:username])
+        @user = User.find_by(username: params[:username] ,password: params[:password]) 
         if @user
+            session[:user_id] = @user.id
             redirect_to("/home/Main")
             flash[:notice] = "Login Success"
         else
@@ -17,6 +18,7 @@ class UserController < ApplicationController
     def Adduser
         @user = User.new(username: params[:username] ,password: params[:password])
         if @user.save
+            session[:user_id] = @user.id
             redirect_to("/home/Main")
             flash[:notice] = "Create Success"
         else
@@ -25,10 +27,11 @@ class UserController < ApplicationController
         end
     end
 
-    
-
 
     def logout
+        session[:user_id] = nil
+        redirect_to("/")
+        flash[:notice] = "Logout"
     end
 
 

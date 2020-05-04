@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_30_163858) do
+ActiveRecord::Schema.define(version: 2020_05_04_035611) do
 
 # Could not dump table "calories" because of following StandardError
 #   Unknown type 'String' for column 'item'
