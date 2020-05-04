@@ -24,6 +24,11 @@ Rails.application.routes.draw do
   post "/edit_data/Edit_Cal" => "calories#edit_rec"
 
   post "/edit_data/Delete_Cal" => "calories#delete_rec"
+
+  post "/day_cal/Add_cal" => "day_cal#Add_Item" 
+
+  post "/day_cal/reset_daycal" => "day_cal#reset_daycal"  
  
+  get "/edit_data/Add_cal" => "edit_data#Add_Cal"
 
 end

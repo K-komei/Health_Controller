@@ -42,16 +42,12 @@
           </div>
           <div class = "delete col_item">          
           <%= form_tag({:controller => 'calories', :action => 'delete_rec' },{ :method => :post}) do %>
-            <input type="hidden" name="id" value= <% calory.id %>>
-              <%= "#{calory.id}"%> 
-            <input type="submit" value="送信" class ="contens_btn delete_btn">
+            <input type="hidden" name="id" value= <%= "#{calory.id}"%> >
+            <input type="submit" value="delete" class ="contens_btn delete_btn">
           <%end%>
           </div>
         </div>
     <%end%>
-
-
-
 </div>
 
 </div>

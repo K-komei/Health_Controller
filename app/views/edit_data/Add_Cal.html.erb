@@ -4,33 +4,98 @@
 </div>
 
 <div class = "Main_Area">
-<div class="area">
-    <input type="radio" name="tab_name" id="tab1" checked>
-    <label class="tab_class" for="tab1">Custom_Add</label>
-    <div class="content_class">
-    <div class = "From_Area">
-    <%= form_tag({ :controller => 'calories', :action => 'create' },{ :method => :post}) do %>
-    <h2>Date</h2>
-    <input type = "text" name = "Day" value = "<%= Date.today %>" class="editcol">
-    <h2>Add Item</h2>
-    <input type = "text" name = "item" value = "" class="editcol" autocomplete="off">
-     <h2>Item's Calory</h2>
-     <input type = "text" name = "cal" value = "0" class="editcol" autocomplete="off">
-    <h2></h2>
-    <input type = "submit" value = "Save" class = "save_btn">
+<input type="button"  value="ChangeMode" onclick="tabchange()" id = "changebtn" >
+<%= form_tag({:controller => 'day_cal', :action => 'reset_daycal'},{ :method => :post}) do %>
+<input type="submit" value="DayCalReset" id = "daycal_resetbtn" >
+<% end %>
+
+    <div class = "DataInputArea" id = "preset">
+    <% @Preset_Array.each do| pre_item | %>
+    <div class="preset_Item">
+    <%= form_tag({:controller => 'day_cal', :action => 'Add_Item' },{ :method => :post}) do %>
+        <input type="hidden" name="item" value=  "<%= pre_item.item %>"  >
+        <input type="hidden" name="cal" value= "<%= pre_item.cal %>" >
+        <input type="hidden" name="user_id" value= "<%= pre_item.user_id%>" >
+        <input type="hidden" name="Day" value= "<%= Date.today%>" >
+        <%= "#{pre_item.item} ・・・ #{pre_item.cal}kcal" %>
+        <input type = "submit" class = "preset_btn" value = "+">
+    <% end %>
+    </div>
+    <% end %>
+    </div>
+
+    <div class = "DataInputArea" id = "costom">
+      <%= form_tag({:controller => 'day_cal', :action => 'Add_Item' },{ :method => :post}) do %>
+        <h2>Date</h2>
+      <input type = "text" name = "Day" value = "<%= Date.today %>" class="editcol">
+        <h2>Add Item</h2>
+      <input type = "text" name = "item" value = "" class="editcol" autocomplete="off">
+        <h2>Item's Calory</h2>
+      <input type = "text" name = "cal" value = "0" class="editcol" autocomplete="off">
+        <h2></h2>
+      <input type = "submit" value = "Add" class = "save_btn">
+      <%end%>
+    </div>
+        
+
+
+    <div class = "temp-veiw">    
+    <% @daycals.each do| daycal | %>
+        <div class = "temp-Contains">
+          <div class = "item col_item"> <%= "#{daycal.item}" %> </div>
+          <div class = "cal col_item"> <%= "・・　#{daycal.cal} kcal" %> </div>
+          <div class = "delete col_item">          
+            <%= form_tag({:controller => 'calories', :action => 'delete_rec' },{ :method => :post}) do %>
+              <input type="hidden" name="id" value= <%= "#{daycal.id}"%> >
+              <input type="submit" value="delete" class ="contens_btn delete_btn">
+            <%end%>
+          </div>
+        </div>
     <%end%>
+
+    </div>
+    <div class = "saves">
+     <%= form_tag({:controller => 'calories', :action => 'delete_rec' },{ :method => :post}) do %>
+      <input type="hidden" name="id" value= "" >
+      <input type="submit" value="save" class ="send_data">
+     <%end%>
 </div>
-    </div>
-    <input type="radio" name="tab_name" id="tab2" >
-    <label class="tab_class" for="tab2">History_Item</label>
-    <div class="content_class">
-      <p>Add's Hsitory</p>
-      <div class = "veiw">
-      </div>
-    </div>
+
+  </div>
+
+
+    
+
+
    
 </div>
 
 </div>
-
 </div>
+
+<script>
+
+//初期表示は非表示 (preset)
+
+document.getElementById("preset").style.display ="block";
+document.getElementById("costom").style.display ="none";
+
+function tabchange(){
+  const tab1 = document.getElementById("preset");
+  const tab2 = document.getElementById("costom");
+
+	
+	if(tab1.style.display == "block"){
+    //presetがonの状態(costomに変更)
+		tab1.style.display ="none";
+    tab2.style.display ="block";
+
+	}else{
+    //presetがoffの状態(presetに変更)
+		tab1.style.display ="block";
+    tab2.style.display ="none";
+
+	}  
+}
+
+</script>

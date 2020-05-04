@@ -2,15 +2,31 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.Add_Cal{
+  position: relative;
+}
 
-.From_Area h2{
+.DataInputArea{
+  border: 1px solid #e6ecf0;
+  background-color: rgba($color: aliceblue, $alpha: 0.2);
+  border-radius: 4px;  
+  border-style:solid;
+  border-color: darkblue;
+  border-width: 1px;
+  width: 30%;
+  height:70%;
+  position: absolute;
+  top:120px;
+}
+
+.DataInputArea h2{
+  padding-left: 30px;
     color:cornflowerblue;
-    font-weight: normal; 
-    padding-right: 45px;
-    padding-bottom: 5px;
+    font-weight: normal;
+    width: 100%;
     font-size: 30px;
     font-family: 'MyFont', sans-serif;
-    margin: 0;
+    margin: 10px;
 }
 
 .editcol{
@@ -20,7 +36,7 @@
     border-style:solid;
     border-color: darkblue;
     border-width: 1px;
-    width: 200px;
+    width: 350px;
     height:30px;
     margin-left:20px ;
     margin-top: 20px;
@@ -43,57 +59,100 @@
     font-size: 12px;
     font-weight: bold;
     padding: 4px 4px;
-    margin-top: 2px;
-    margin-bottom: 2px; 
     width: 120px;
     height: 30px;
-    margin-left: 120px;
-    
+    margin-right: 50px;
+    float:right;  
     text-align: center;
     
   }
 
-  .area {
-    width: 100%;
-    margin: auto;
-    flex-wrap: wrap;
-    display: flex;
- 
+  .temp-veiw{
+    width: 55%;
+    overflow-y:scroll;
+    border-top: double;
+    border-color: rgba(255, 110, 80, 0.8);
+    height: 400px;
+    background-color:rgba(150,150,150, .6);
+    position: absolute;
+    top:120px;
+    left: 40%;
+    }
+   
+  .temp-Contains{
+    height: 30px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    margin-left: 1px;
+    margin-right: 1px;
+  }
+
+.saves{
+  position: absolute;
+  bottom:50px;    
+  right: 5%;
+
 }
-   
-  .tab_class {
-
-    width: calc(100%/5);
-    height: 50px;
-    background-color: darkgrey;
-    line-height: 50px;
-    font-size: 15px;
+.send_data{
+    width:200px;
+    text-decoration: none;
+    background-image: linear-gradient(#fff,aliceblue);
+    border: 1px solid #e6ecf0;
+    border-radius: 4px;
+    color: #393e42;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: bold;
+    height: 30px;
     text-align: center;
-    display: block;
-    float: left;
-    order: -1;
-  }
-   
-  input[name="tab_name"] {
-    display: none;
-  }
-   
-  input:checked + .tab_class {
-    background-color: cadetblue;
-    color: aliceblue;
-  }
-   
-  .content_class {
-    display: none;
-    width: 100%;
-    border-style:solid ;
-    border-color:cadetblue;
-    border-width: 1px;
-    padding-top:20px ;
+}
 
-  }
+#changebtn{
+  background-image: linear-gradient(#fff,#f5f8fa);
+  border: 1px solid #e6ecf0;
+  border-radius: 4px;
+  color: #393e42;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 4px 4px;
+  width: 120px;
+  height: 30px;
+  float: left;
+}
 
-   
-  input:checked + .tab_class + .content_class {
-    display: block;
-  }
+#daycal_resetbtn{
+  background-image: linear-gradient(#fff,#f5f8fa);
+  border: 1px solid #e6ecf0;
+  border-radius: 4px;
+  color: #393e42;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 4px 4px;
+  width: 120px;
+  height: 30px;
+  float: left;
+}
+
+
+.preset_Item{
+  width: 94.5%;
+  background-color:rgba($color: aliceblue, $alpha: 0.7);
+  padding-left: 20px;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  height: 5%;
+  border: 1px solid #e6ecf0;
+  border-radius: 4px; 
+  font-size: 20px;
+  font-family: 'MyFont', sans-serif;
+}
+
+.preset_btn{
+  float:right;
+  margin-right: 5%;
+}

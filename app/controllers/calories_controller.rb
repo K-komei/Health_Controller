@@ -1,6 +1,5 @@
 class CaloriesController < ApplicationController
 
-    
   def create
     @calory = Calory.new(
       Day: params[:Day],
@@ -28,12 +27,10 @@ class CaloriesController < ApplicationController
 
   def delete_rec
      check = Calory.find_by(id: params[:id])
-    if check.destroy()
-      
-      flash[:notice] = "note"
-    else
-      flash[:notice] = "nots"
+    if check
+      check.destroy
     end
+
     redirect_to("/home/Main")
 
   end
