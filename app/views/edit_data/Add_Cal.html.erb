@@ -45,7 +45,7 @@
           <div class = "item col_item"> <%= "#{daycal.item}" %> </div>
           <div class = "cal col_item"> <%= "・・　#{daycal.cal} kcal" %> </div>
           <div class = "delete col_item">          
-            <%= form_tag({:controller => 'calories', :action => 'delete_rec' },{ :method => :post}) do %>
+            <%= form_tag({:controller => 'day_cal', :action => 'delete_rec' },{ :method => :post}) do %>
               <input type="hidden" name="id" value= <%= "#{daycal.id}"%> >
               <input type="submit" value="delete" class ="contens_btn delete_btn">
             <%end%>
@@ -55,7 +55,7 @@
 
     </div>
     <div class = "saves">
-     <%= form_tag({:controller => 'calories', :action => 'delete_rec' },{ :method => :post}) do %>
+     <%= form_tag({:controller => 'day_cal', :action => 'daycal_save' },{ :method => :post}) do %>
       <input type="hidden" name="id" value= "" >
       <input type="submit" value="save" class ="send_data">
      <%end%>

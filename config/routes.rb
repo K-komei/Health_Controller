@@ -28,7 +28,13 @@ Rails.application.routes.draw do
   post "/day_cal/Add_cal" => "day_cal#Add_Item" 
 
   post "/day_cal/reset_daycal" => "day_cal#reset_daycal"  
+
+  post "/day_cal/delete_rec" => "day_cal#delete_rec"  
  
+  post "/day_cal/daycal_save" => "day_cal#daycal_save"  
+
+
   get "/edit_data/Add_cal" => "edit_data#Add_Cal"
+  
 
 end

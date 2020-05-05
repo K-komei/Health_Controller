@@ -29,6 +29,33 @@ class DayCalController < ApplicationController
         redirect_to("/edit_data/Add_cal")
       end
 
+      def delete_rec
+        check = DayCal.find_by(id: params[:id])
+       if check
+         check.destroy
+       end
+   
+       redirect_to("/edit_data/Add_cal")
+   
+     end
+
+     def daycal_save
+      @cals=DayCal.all
+      @cals.each do | savecal |
+        calory = Calory.new(
+          Day: Date.today,
+          item: savecal.item,
+          cal: savecal.cal,
+          user_id: session[:user_id]
+        ) 
+        calory.save
+      end
+      DayCal.delete_all
+      redirect_to("/home/Main")
+
+     end
+   
+
 
 
 
