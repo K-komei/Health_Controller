@@ -12,7 +12,7 @@ class DayCalController < ApplicationController
       end
 
       def Add_Preset
-        @Priset = Priset.new(
+        @Priset = Preset.new(
             Item: params[:item],
             cal:  params[:item],
             user_id: session[:user_id]
@@ -20,8 +20,18 @@ class DayCalController < ApplicationController
             @Priset.save
       end
 
+      def delete_preset
+        check = Preset.find_by(id: params[:id])
+        if check
+          check.destroy
+        end
+        redirect_to("/edit_data/Add_cal")
+ 
+      end
+
+
       def VeiwItems
-        @Priset_Array = Priset.all
+        @Priset_Array = Preset.all
       end
 
       def reset_daycal

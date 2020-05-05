@@ -1,0 +1,23 @@
+<div class = "Edit_Preset base">
+<div class = "ContensTitle">
+<h1>Preset EDIT_Items</h1>
+</div>
+
+<div class = "Main_Area">
+
+    <div class = "DataInputArea" id = "preset_edit">
+    <% @Preset_Array.each do| pre_item | %>
+    <div class="preset_Item">
+        <%= form_tag({:controller => 'day_cal', :action => 'delete_preset' },{ :method => :post}) do %>
+        <%= "#{pre_item.item} ・・・ #{pre_item.cal}kcal" %>
+        <input type="hidden" name="id" value=  "<%= pre_item.id %>"  >
+        <input type = "submit" class = "preset_btn" value = "-" id = "predelbtn">
+    <% end %>
+    </div>
+    <% end %>
+    </div>
+
+
+</div>
+</div>
+</div>

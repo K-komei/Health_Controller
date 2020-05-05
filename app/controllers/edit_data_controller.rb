@@ -11,4 +11,8 @@ class EditDataController < ApplicationController
   def Add_cal
   end
 
+  def Edit_Preset
+    @Preset_Array = Preset.all
+  end
+
 end

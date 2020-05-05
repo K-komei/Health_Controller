@@ -8,6 +8,7 @@
 <%= form_tag({:controller => 'day_cal', :action => 'reset_daycal'},{ :method => :post}) do %>
 <input type="submit" value="DayCalReset" id = "daycal_resetbtn" >
 <% end %>
+<input type="button"  value="EditMode" onclick="delchange()" id = "editbtn" >
 
     <div class = "DataInputArea" id = "preset">
     <% @Preset_Array.each do| pre_item | %>
@@ -80,6 +81,8 @@
 document.getElementById("preset").style.display ="block";
 document.getElementById("costom").style.display ="none";
 
+document.getElementById("predelbtn").style.display ="none";
+
 function tabchange(){
   const tab1 = document.getElementById("preset");
   const tab2 = document.getElementById("costom");
@@ -96,6 +99,11 @@ function tabchange(){
     tab2.style.display ="none";
 
 	}  
+}
+
+function delchange(){
+  const btn = document.getElementById("predelbtn");
+  btn.style.display ="block";
 }
 
 </script>
