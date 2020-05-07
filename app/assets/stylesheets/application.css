@@ -152,3 +152,22 @@ html{
        
 }
 
+.link_cont{
+    
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 60%;
+    padding-top:5px;
+    padding-bottom:5px;
+    float:left;
+    border-style: initial;
+    font-weight: normal; 
+    font-family: 'Alegreya Sans SC', sans-serif;
+    background-color: rgba(100,120,120, 0.0);
+    margin-left: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    color: darkviolet;
+    
+}

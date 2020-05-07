@@ -4,11 +4,10 @@
 </div>
 
 <div class = "Main_Area">
-<input type="button"  value="ChangeMode" onclick="tabchange()" id = "changebtn" >
+<input type="button"  value="" onclick="tabchange()" id = "changebtn" >
 <%= form_tag({:controller => 'day_cal', :action => 'reset_daycal'},{ :method => :post}) do %>
 <input type="submit" value="DayCalReset" id = "daycal_resetbtn" >
 <% end %>
-<input type="button"  value="EditMode" onclick="delchange()" id = "editbtn" >
 
     <div class = "DataInputArea" id = "preset">
     <% @Preset_Array.each do| pre_item | %>
@@ -20,7 +19,8 @@
         <input type="hidden" name="Day" value= "<%= Date.today%>" >
         <%= "#{pre_item.item} ・・・ #{pre_item.cal}kcal" %>
         <input type = "submit" class = "preset_btn" value = "+">
-    <% end %>
+        <% end %>  
+
     </div>
     <% end %>
     </div>
@@ -77,33 +77,32 @@
 <script>
 
 //初期表示は非表示 (preset)
-
+document.getElementById("changebtn").value ="Preset";
 document.getElementById("preset").style.display ="block";
 document.getElementById("costom").style.display ="none";
+document.getElementById("editbtn").style.display ="block";
 
-document.getElementById("predelbtn").style.display ="none";
+document.getElementsByClass("predelbtn").style.display ="block";
 
 function tabchange(){
   const tab1 = document.getElementById("preset");
   const tab2 = document.getElementById("costom");
-
-	
+  const btn_change = document.getElementById("changebtn");
+  
 	if(tab1.style.display == "block"){
     //presetがonの状態(costomに変更)
 		tab1.style.display ="none";
     tab2.style.display ="block";
-
+    btn_change.value ="Costom";
+    
 	}else{
     //presetがoffの状態(presetに変更)
 		tab1.style.display ="block";
     tab2.style.display ="none";
+    btn_change.value ="Preset";
 
-	}  
+	}
 }
 
-function delchange(){
-  const btn = document.getElementById("predelbtn");
-  btn.style.display ="block";
-}
 
 </script>

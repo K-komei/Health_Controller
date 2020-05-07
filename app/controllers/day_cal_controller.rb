@@ -13,11 +13,14 @@ class DayCalController < ApplicationController
 
       def Add_Preset
         @Priset = Preset.new(
-            Item: params[:item],
-            cal:  params[:item],
+            item: params[:item],
+            cal:  params[:cal],
             user_id: session[:user_id]
             )
             @Priset.save
+            redirect_to("/edit_data/Edit_cal")
+
+
       end
 
       def delete_preset

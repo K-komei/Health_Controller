@@ -2,6 +2,13 @@ class UserController < ApplicationController
     def Create
     end
 
+    def User_Data
+        get_id = session[:user_id]
+        @user=User.find_by(id: get_id)
+        @Priset_Array = Preset.all
+
+    end
+
 
     def login
         @user = User.find_by(username: params[:username] ,password: params[:password]) 
@@ -33,7 +40,5 @@ class UserController < ApplicationController
         redirect_to("/")
         flash[:notice] = "Logout"
     end
-
-
 
 end

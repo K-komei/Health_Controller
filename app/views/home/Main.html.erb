@@ -24,9 +24,11 @@
 
    
  </div>
+ 
  <div class ="veiw_ber">
 
 </div>
+
 
 <div class = "veiw">
     <% @calories.each do| calory | %>
@@ -46,6 +48,9 @@
         </div>
     <%end%>
 </div>
+
+<%= column_chart Calory.pluck(:Day, :cal) %><!-- 追記 -->
+
 
 </div>
 

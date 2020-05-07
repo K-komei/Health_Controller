@@ -6,6 +6,9 @@ Rails.application.routes.draw do
 
   post "/home/Main" => "home#Main"
 
+  get "/home/Login" => "home#Login"
+
+
   get "/edit_data/Add_Cal" => "edit_data#Add_Cal"
   
   get "/edit_data/Add_Cal" => "calories#add_rec"
@@ -19,6 +22,8 @@ Rails.application.routes.draw do
   
   post "/user/login" => "user#login"
 
+  post "/user/logout" => "user#logout"
+
   post "/user/Adduser" => "user#Adduser"
 
   post "/edit_data/Edit_Cal" => "calories#edit_rec"
@@ -31,9 +36,10 @@ Rails.application.routes.draw do
 
   post "/day_cal/delete_rec" => "day_cal#delete_rec"  
 
+  post "/day_cal/Add_Preset" => "day_cal#Add_Preset"  
+  
   post "/day_cal/delete_preset" => "day_cal#delete_preset"  
   
- 
   post "/day_cal/daycal_save" => "day_cal#daycal_save"  
 
 
@@ -41,5 +47,6 @@ Rails.application.routes.draw do
 
   get "/edit_data/Edit_Preset" => "edit_data#Edit_Preset"
   
+  get "/user/User_Data" => "user#User_Data"
 
 end

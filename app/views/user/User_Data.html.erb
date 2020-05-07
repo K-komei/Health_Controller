@@ -1,0 +1,25 @@
+<div class = "User_Data base" >
+<div class = "ContensTitle">
+<h1>Setting User</h1>
+</div>
+<div class = "Main_Area">
+<h1> <%= @user.username %>  </h1>
+
+    <%= form_tag({:controller => 'day_cal', :action => 'Add_Preset' },{ :method => :post}) do %>
+        <input type="text" name="item" >
+        <input type="text" name="cal" >
+        <input type="hidden" name="user_id" value= "<%= @user.id%>" >
+        <input type = "submit" class = "test_btn" value = "送信">
+    <% end %>
+
+
+<% @Priset_Array.each do| priset_data | %>
+
+<%= priset_data.item %>
+
+<% end %>
+
+
+
+</div>
+</div>

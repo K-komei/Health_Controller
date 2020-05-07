@@ -4,8 +4,19 @@
 </div>
 
 <div class = "Main_Area">
+    
+
+      <%= form_tag({:controller => 'day_cal', :action => 'Add_Preset' },{ :method => :post}) do %>
+        <h2>Add Item</h2>
+      <input type = "text" name = "item" value = "" class="editcol" autocomplete="off">
+        <h2>Item's Calory</h2>
+      <input type = "text" name = "cal" value = "0" class="editcol" autocomplete="off">
+        <h2></h2>
+      <input type = "submit" value = "Add" class ="create_btn">
+      <%end%>
 
     <div class = "DataInputArea" id = "preset_edit">
+    
     <% @Preset_Array.each do| pre_item | %>
     <div class="preset_Item">
         <%= form_tag({:controller => 'day_cal', :action => 'delete_preset' },{ :method => :post}) do %>

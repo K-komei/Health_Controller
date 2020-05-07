@@ -12,7 +12,7 @@ class EditDataController < ApplicationController
   end
 
   def Edit_Preset
-    @Preset_Array = Preset.all
+    @Preset_Array = Preset.where(user_id: session[:user_id])
   end
 
 end

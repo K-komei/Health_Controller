@@ -20,21 +20,50 @@
    </div>
    <div class = "link_area">
     
+    <% if session[:user_id] %>
+
+     <div class = "link_btn">
+     <%= form_tag({:controller => 'user', :action => 'logout' },{ :method => :post}) do %>
+      <input type="submit" value="Logout" class = "link_cont">
+     <% end %>
+      </div>
+
     <div class = "link_btn">
-      <%= link_to("Login","/") %>
+     <%= form_tag({:controller => 'home', :action => 'Main' },{ :method => :get}) do %>
+      <input type="submit" value="MainPage" class = "link_cont">
+     <% end %>
+    </div>
+
+    <div class = "link_btn">
+      <%= form_tag({:controller => 'edit_data', :action => 'Add_Cal' },{ :method => :get}) do %>
+      <input type="submit" value="CaloryInput" class = "link_cont">
+     <% end %>
+
+    </div>
+
+    <div class = "link_btn">
+      <%= form_tag({:controller => 'edit_data', :action => 'Edit_Preset' },{ :method => :get}) do %>
+      <input type="submit" value="PresetEdit" class = "link_cont">
+     <% end %>
+
     </div>
 
 
-    <div class = "link_btn">
-      <%= link_to("Main","/home/Main") %>
-    </div>
-    <div class = "link_btn">
-      <%= link_to("Add","/edit_data/Add_Cal") %>
-    </div>
-    <div class = "link_btn">
-      <%= link_to("Create","/user/Create") %>
-    </div>
+    <% else %>
+        <div class = "link_btn">
+              <%= form_tag({:controller => 'home', :action => 'Login'},{:method => :get}) do %>
+      <input type="submit" value="Login" class = "link_cont">
+     <% end %>
 
+        </div>
+         <div class = "link_btn">
+         <%= form_tag({:controller => 'user', :action => 'Create' },{ :method => :get}) do %>
+      <input type="submit" value="UserCreate" class = "link_cont">
+     <% end %>
+
+
+        </div>
+    <% end %>
    
    </div>  
    </div>
