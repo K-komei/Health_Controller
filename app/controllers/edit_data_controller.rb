@@ -15,4 +15,5 @@ class EditDataController < ApplicationController
     @Preset_Array = Preset.where(user_id: session[:user_id])
   end
 
+
 end

@@ -1,0 +1,2 @@
+class Graff < ApplicationRecord
+end
